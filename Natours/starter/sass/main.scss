@@ -6,13 +6,21 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-medium: #55c57a;
+$color-primary-dark: #28b485;
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+}
 
 body {
   font-family: "Lato", sans-serif;
@@ -21,23 +29,32 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); }
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
 
 .header__logo-box {
   position: absolute;
   top: 4rem;
-  left: 4rem; }
+  left: 4rem;
+}
 
 .header__logo {
-  height: 3.5rem; }
+  height: 3.5rem;
+}
 
 .header__text-box {
   height: 80vh;
@@ -46,7 +63,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: red; */ }
+  /* background-color: red; */
+}
 
 .heading-primary {
   color: #fff;
@@ -55,18 +73,21 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  backface-visibility: hidden; }
+  backface-visibility: hidden;
+}
 
 .heading-primary--main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3.5rem;
+
   animation-name: moveInLeft;
   animation-duration: 2s;
   animation-timing-function: ease-out;
   /* animation-iteration-count: 3; */
-  /* animation-delay: 3s; */ }
+  /* animation-delay: 3s; */
+}
 
 .heading-primary--sub {
   display: block;
@@ -75,49 +96,67 @@ body {
   letter-spacing: 1.75rem;
   animation-name: moveInRight;
   animation-duration: 2s;
-  animation-timing-function: ease-out; }
+  animation-timing-function: ease-out;
+}
 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-10rem); }
+    transform: translateX(-10rem);
+  }
+
   90% {
-    transform: translateX(1rem); }
+    transform: translateX(1rem);
+  }
+
   100% {
     opacity: 100%;
-    transform: translateX(0); } }
+    transform: translateX(0);
+  }
+}
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(10rem); }
+    transform: translateX(10rem);
+  }
+
   90% {
-    transform: translateX(-1rem); }
+    transform: translateX(-1rem);
+  }
+
   100% {
     opacity: 100%;
-    transform: translateX(0); } }
+    transform: translateX(0);
+  }
+}
 
 .btn {
   padding: 1rem 2rem;
   border-radius: 50vh;
-  transition: all 0.2s; }
+  transition: all 0.2s;
+}
 
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .btn:hover {
   transform: translateY(calc(20vh - 3px));
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
 
 .btn:active {
   transform: translateY(calc(20vh - 1px));
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
 
 .btn--white {
   background-color: #fff;
-  color: #777; }
+  color: #777;
+}
 
 header .btn--white {
   transform: translateY(20vh);
@@ -125,7 +164,8 @@ header .btn--white {
   animation-duration: 2s;
   animation-timing-function: ease-out;
   animation-fill-mode: backwards;
-  animation-delay: 1s; }
+  animation-delay: 1s;
+}
 
 .btn::after {
   content: "";
@@ -137,21 +177,30 @@ header .btn--white {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all 0.4s; }
+  transition: all 0.4s;
+}
 
 .btn-white::after {
-  background-color: #fff; }
+  background-color: #fff;
+}
 
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
+  opacity: 0;
+}
 
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(21vh); }
+    transform: translateY(21vh);
+  }
+
   90% {
-    transform: translateY(19vh); }
+    transform: translateY(19vh);
+  }
+
   100% {
     opacity: 100%;
-    transform: translateY(20vh); } }
+    transform: translateY(20vh);
+  }
+}
